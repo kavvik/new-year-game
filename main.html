@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новогодняя Игра - Онбординг</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/Users/a.koziukin/Desktop/игра/background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .input-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .input-container input {
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-container .btn {
+            display: block;
+            width: auto;
+            margin: 10px auto 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="onboarding">
+        <h1>Добро пожаловать в Новогоднюю Игру!</h1>
+        <p>Эта игра создаст весёлую атмосферу на вашем новогоднем празднике. Ниже представлены правила и инструкции для участников.</p>
+
+        <h2>Как играть?</h2>
+        <ol>
+            <li>Каждому участнику раздаются три задания. Никто не должен знать задания других игроков.</li>
+            <li>Выполняйте свои задания незаметно, чтобы другие участники не догадались, что вы делаете это в рамках игры.</li>
+            <li>Если вы узнали задание другого игрока, сообщите об этом ведущему и получите дополнительный балл.</li>
+            <li>Общая задача для всех: заснять выполнение своих заданий на видео так, чтобы никто не заметил.</li>
+        </ol>
+
+        <h2>Как получить баллы?</h2>
+        <ul>
+            <li>+2 балла за каждое выполненное задание.</li>
+            <li>+1 балл за каждое задание, заснятое на видео.</li>
+            <li>+1 балл за правильное угадывание чужого задания.</li>
+            <li>-1 балл за провал задания, если кто-то узнал, что вы его выполняете.</li>
+        </ul>
+
+        <h2>Пример заданий</h2>
+        <ul>
+            <li>Сказать тост, упомянув слово «мандарин».</li>
+            <li>Незаметно поменять два предмета на столе местами.</li>
+            <li>Убедить кого-то, что он выглядит как главный герой новогоднего фильма.</li>
+        </ul>
+
+        <h3>Готовы начать?</h3>
+        <p>Если вы хотите узнать своё задание или задать вопрос ведущему, нажмите на кнопку ниже.</p>
+        <a href="#" class="btn" onclick="showInputScreen()">Начать Игру</a>
+    </div>
+
+    <div class="container" id="input-screen" style="display: none;">
+        <h2>Введите ваше имя</h2>
+        <div class="input-container">
+            <input type="text" id="player-name" placeholder="Ваше имя">
+            <a href="#" class="btn" onclick="getTask()">Получить задание</a>
+        </div>
+    </div>
+
+    <script>
+        function showInputScreen() {
+            document.getElementById('onboarding').style.display = 'none';
+            document.getElementById('input-screen').style.display = 'block';
+        }
+
+        function getTask() {
+            const name = document.getElementById('player-name').value.trim();
+            if (name === "") {
+                alert('Пожалуйста, введите ваше имя!');
+                return;
+            }
+
+            if (name.toLowerCase() === "богдан") {
+                window.location.href = 'bogdan.html';
+            } else {
+                alert(`Привет, ${name}! Ваше задание будет выдано ведущим.`);
+            }
+        }
+    </script>
+</body>
+</html>
