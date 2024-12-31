@@ -77,14 +77,25 @@
             <li>+1 балл за правильное угадывание чужого задания.</li>
         </ul>
 
-        <h2>Задания для Богдана</h2>
-        <ul>
-            <li>Передвигать любые предметы на столе под предлогом, что "так будет лучше".(до 1:00)</li>
-            <li>Подкладывать на стул Дани предметы в течение вечера.(До 2:00)</li>
-            <li>В течение вечера каждому из гостей произнести фразу: «Новый год – время чудес», глядя на кого-то очень серьёзно, для каждого гостя на другом языке:</li>
-        </ul>
+        <h2>Богдан, эти задания для тебя</h2>
+<button id="toggleSpoiler" class="btn">Показать задания</button>
+<div id="spoilerContent" style="display: none; margin-top: 10px;">
+    <ul>
+        <li>Передвигать любые предметы на столе под предлогом, что "так будет лучше".(до 1:00)</li>
+        <li>Подкладывать на стул Дани предметы в течение вечера.(До 2:00)</li>
+        <li>В течение вечера каждому из гостей произнести фразу: «Новый год – время чудес», глядя на кого-то очень серьёзно, для каждого гостя на другом языке. (языки выбери сам)</li>
+    </ul>
+</div>
 
-        <a href="index.html" class="btn">Вернуться назад</a>
+<script>
+    document.getElementById("toggleSpoiler").addEventListener("click", function () {
+        const spoilerContent = document.getElementById("spoilerContent");
+        const isHidden = spoilerContent.style.display === "none";
+        spoilerContent.style.display = isHidden ? "block" : "none";
+        this.textContent = isHidden ? "Скрыть задания" : "Показать задания";
+    });
+</script>
+
     </div>
 </body>
 </html>
