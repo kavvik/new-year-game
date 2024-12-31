@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новогодняя Игра - Правила и Задания для Богдана</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('assets/backgroundny.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Новогодняя Игра - Правила</h1>
+        <h2>Как играть?</h2>
+        <ol>
+            <li>Каждому участнику раздаются три задания. Никто не должен знать задания других игроков.</li>
+            <li>Выполняйте свои задания незаметно, чтобы другие участники не догадались, что вы делаете это в рамках игры.</li>
+            <li>Если вы узнали задание другого игрока, сообщите об этом ведущему и получите дополнительный балл.</li>
+            <li>Общая задача для всех: заснять выполнение своих заданий на видео так, чтобы никто не заметил.</li>
+            <li>Старайтесь делать так, что бы Я ВИДЕЛ, что вы выполняете задание, особенно если нет фото/видео.</li>
+            <li>У меня есть еще один способ узнать выполнили ли вы задание, но он опасен для вас, другие игроки могут догадаться для вашей активности (используем в крайнем случае, если другого способа подтвердить нет.)</li>
+            <li>Канал: Этот телеграм канал будет освещать события игры и его важные вехи, давать подсказки и возможно присылать видео участников (если такие будут). </li>
+            <li>Всего за игру возможно собрать 9 баллов за задания+фиксацию. + 12 баллов если отгадать все остальные задания участников.</li>
+        </ol>
+
+        <h2>Фото и видео фиксация (+1 балл за каждое задание, можно получить +3 балла максимум):</h2>
+        <ol>
+            <li>На видео и/или фото должно быть понятно, что вы выполняете задание.</li>
+            <li>Нельзя снимать открыто. (Или делать так, что бы это было в контексте)</li>
+            <li>Фото и видео отправлять в телеграмм в личку, с номером задания.</li>
+        </ol>
+
+        <h2>Как получить баллы?</h2>
+        <ul>
+            <li>+1 балл за первое выполненное задание.</li>
+            <li>+2 балла за второе выполненное задание.</li>
+            <li>+3 балл за третье выполненное задание.</li>
+            <li>+1 балл за каждое задание, заснятое на видео (максимум +3 балла).</li>
+            <li>+1 балл за правильное угадывание чужого задания.</li>
+        </ul>
+
+        <h2>Злата, эти задания для тебя</h2>
+<button id="toggleSpoiler" class="btn">Показать задания</button>
+<div id="spoilerContent" style="display: none; margin-top: 10px;">
+    <ul>
+        <li>Постараться в разговоре с кем-нибудь обсудить, кто из знаменитостей празднует Новый год лучше всех.</li>
+        <li>Попросить кого-то из гостей «держать мандарин на счастье» на протяжении 10 минут, и посмотреть, как долго он продержится.</li>
+        <li>Забавный новогодний "ритуал" (трогать игрушки в определенной последовательности) и попытаться вовлечь в него других гостей. И показать его минимум 4 гостям.</li>
+    </ul>
+</div>
+
+<script>
+    document.getElementById("toggleSpoiler").addEventListener("click", function () {
+        const spoilerContent = document.getElementById("spoilerContent");
+        const isHidden = spoilerContent.style.display === "none";
+        spoilerContent.style.display = isHidden ? "block" : "none";
+        this.textContent = isHidden ? "Скрыть задания" : "Показать задания";
+    });
+</script>
+
+    </div>
+</body>
+</html>
